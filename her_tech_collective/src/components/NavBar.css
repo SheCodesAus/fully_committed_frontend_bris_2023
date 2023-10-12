@@ -8,7 +8,7 @@
 }
 
 #navlinks {
-    text-align: right;
+    /* text-align: right; */
     justify-content: flex-end;
     margin-top: 20px;
 }
