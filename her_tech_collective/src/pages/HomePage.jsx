@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./HompePage.css"
+import "./HomePage.css";
 import { Link } from "react-router-dom";
 
 
