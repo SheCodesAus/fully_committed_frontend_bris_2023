@@ -19,8 +19,8 @@ return (
         {/* <Link to={profileLink}> */}
         <img src={profileData.image_url} />
         <h3>{profileData.profile_name}</h3>
-        <h4>{profileData.location}</h4>
-        <h4>{profileData.skills}</h4>
+        <h4>{profileData.location.location_name}</h4>
+        <h4>{profileData.skills.skill_name}</h4>
         {/* </Link> */}
     </div>
 );
