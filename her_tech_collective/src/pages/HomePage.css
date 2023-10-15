@@ -8,6 +8,7 @@
     overflow: hidden;
     border-radius: 5px;
     z-index: 1;
+    margin-top: 60px;
 }
 .slider .slide {
     position:absolute;
@@ -53,11 +54,11 @@
     background-color: #f57657;
 }
 
+/* Homepage info below slider*/
+
 .homepage-info{
-    height:auto;
-    margin: 30px auto;
-    border-radius: 5px;
-    border: 2px solid #f4c75f;
+    background-color: #fff6cc;
+    margin-top: -13px;
 }
 
 .homepage-info h1{
@@ -65,39 +66,43 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     padding: 50px 50px;
-    font-weight: 300;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .homepage-btn-container{
-    background-color: #f57657;
+    border: 2px solid #f57657;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    max-width: 40%;
-    margin: 0 auto;
+    max-width: 35%;
+    margin: 50px auto; 
 }
 
 .homepage-btn{
     font-size: 30px;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #f57657;
     font-weight: 800;
     text-align: center;
     text-decoration: none;
-    padding: 35px;
+    padding: 25px;
 }
 
 .homepage-btn-container:hover {
-    background-color: #ffeb99; /* Change the background color on hover */
-    color: #f57657; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px);
+}
+
+.homepage-btn:hover {
+    color: #f57657;
 }
 
 .diversity {
     font-family: 'Raleway', sans-serif;
     font-size: 10px;
-    background-color: #ffeb99;
+    background-color: #fff6cc;
     padding: 20px;
     margin-top: 30px;
 }
@@ -108,6 +113,11 @@
     color: #f57657;
     border-bottom: 1px solid #f57657;
     padding-bottom: 15px;
+}
+
+.diversity h2 {
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .footer {

@@ -70,7 +70,6 @@ function HomePage() {
           ))}
         </div>
       </section>
-
       <div className="homepage-info">
         <h1>
         Her Tech Collective is dedicated to igniting the aspirations of the next generation of young women in our community. Our mission is to unveil a captivating ensemble of role models thriving in the dynamic realm of technology. Through the resonance of our platform, we empower the belief that technology knows no boundaries – it is a frontier where everyone is welcome.
