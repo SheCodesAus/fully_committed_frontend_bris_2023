@@ -70,17 +70,21 @@ function HomePage() {
           ))}
         </div>
       </section>
-
       <div className="homepage-info">
         <h1>
-          Her Tech Collective aims to inspire young women in the community by
-          showcasing a collection of relatable role models who work in the tech
-          industry. By sharing this website, we can show young people that
-          anyone can work in tech.
+        Her Tech Collective is dedicated to igniting the aspirations of the next generation of young women in our community. Our mission is to unveil a captivating ensemble of role models thriving in the dynamic realm of technology. Through the resonance of our platform, we empower the belief that technology knows no boundaries – it is a frontier where everyone is welcome.
         </h1>
       </div>
       <div className="homepage-btn-container">
-        <Link to="/profiles/" className="homepage-btn">click here to view the collective</Link>
+        <Link to="/profiles/" className="homepage-btn">Click here to view The Collective</Link>
+      </div>
+      <div className="diversity">
+        <h1>Diversity is important to us</h1>
+        <h2>Our definition of women includes transgender and cisgender, including non-binary and gender non-conforming people and all those who identify as women. </h2>
+        <h2>We acknowledge the traditional owners of the lands on which we live, work and learn and pay our respects to their elders past, present and emerging.</h2>
+      </div>
+      <div className="footer">
+        <h1>Powered by Fully Committed 🚀</h1>
       </div>
       
       

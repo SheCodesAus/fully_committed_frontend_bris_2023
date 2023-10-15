@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
 
 /* section */
 .banner {
@@ -8,6 +8,7 @@
     overflow: hidden;
     border-radius: 5px;
     z-index: 1;
+    margin-top: 60px;
 }
 .slider .slide {
     position:absolute;
@@ -29,7 +30,6 @@
     opacity: 1;
 }
 
-
 .slide-dots {
     display: flex;
     justify-content: center;
@@ -41,59 +41,90 @@
 
 /* dots */
 .dot {
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  border: 1px solid lightgrey;
-  border-radius: 50%;
-  margin: 0 5px;
-  
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    margin: 0 5px;
 }
 
 /* current dot filled*/
 .active-dot {
-  background-color: lightgrey;
+    background-color: #f57657;
 }
 
+/* Homepage info below slider*/
+
 .homepage-info{
-    width:100%;
-    height:auto;
-    background-color: #f7f7f7;
-    margin: 30px auto;
-    border-radius: 5px;
-   
+    background-color: #fff6cc;
+    margin-top: -13px;
 }
 
 .homepage-info h1{
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
-    padding: 50px 20px;
-   
-}
-.homepage-btn-container{
-    width: 100%;
-    height: 100px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
+    padding: 50px 50px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .homepage-btn-container{
-    width: 100%;
-    height: 200px;
-    background-color: #f7f7f7;
+    border: 2px solid #f57657;
     border-radius: 5px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 35%;
+    margin: 50px auto; 
 }
 
 .homepage-btn{
-    
-    font-size: 3rem;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
-    color: black;
+    color: #f57657;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.homepage-btn-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px);
+}
+
+.homepage-btn:hover {
+    color: #f57657;
+}
+
+.diversity {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    background-color: #fff6cc;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.diversity h1 {
+    font-weight: 800;
+    font-size: 20px;
+    color: #f57657;
+    border-bottom: 1px solid #f57657;
+    padding-bottom: 15px;
+}
+
+.diversity h2 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-size: 6px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
