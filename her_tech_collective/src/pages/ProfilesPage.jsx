@@ -1,5 +1,32 @@
+import useProfiles from "../hooks/use-profiles";
+import ProfileCard from "../components/ProfileCard/ProfileCard";
+import "./ProfilesPage.css";
+
+
+
 function ProfilesPage() {
-    return <h1>This Her Collective Profiles page</h1>
+
+    const {profiles, isLoading, error } = useProfiles()
+    console.log("I am still looking for the profile: ", isLoading, "!Right now I have", profiles, error)
+
+    if (isLoading) {
+        return <div>I am still loading</div>;
+    }
+
+    if (error) {
+        return (<p>{error.message}</p>);
+    }
+
+    return (
+    <>
+        <div id="profile-list">
+            {profiles.map((profileData, key) => {
+                return <ProfileCard key={key} profileData={profileData} />;
+            })}
+        </div>
+    </>
+    );
 }
+
 
 export default ProfilesPage;
