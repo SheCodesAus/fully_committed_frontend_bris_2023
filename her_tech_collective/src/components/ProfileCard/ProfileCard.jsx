@@ -6,9 +6,10 @@ import "./ProfileCard.css";
 
 function ProfileCard(props) {
     const { profileData } = props;
+
     // const profileLink = `profiles/${profileData.id}/`;
 
-    // console.log('profile data in profileCARD: ', profileData)
+    console.log('profile data in profileCARD: ', profileData)
 // const {profile, isLoading, error} = useProfile(profileData.id)
 // const skills = profile?.skills || []
 // const location = profile?.location || []
@@ -20,8 +21,11 @@ return (
         <img src={profileData.image_url} />
         <h3>{profileData.profile_name}</h3>
         <h4>{profileData.location.location_name}</h4>
-        <h4>{profileData.skills.skill_name}</h4>
-        {/* </Link> */}
+        <ul>
+                {profileData.skills.map((skill) => (
+                    <li key={skill.id}>{skill.skill_name}</li>
+                ))}
+        </ul>
     </div>
 );
 }
