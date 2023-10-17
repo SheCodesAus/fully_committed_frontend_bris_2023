@@ -1,0 +1,28 @@
+#profile-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px auto;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .profile-card {
+        width: 30%;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .profile-card {
+        width: 43%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .profile-card {
+        width: 75%;
+    }
+}
