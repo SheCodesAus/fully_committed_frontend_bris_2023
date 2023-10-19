@@ -1,5 +1,6 @@
 import { useState } from "react";
 import postRegister from "../api/post-register";
+import "./Form.css"
 
 function RegisterForm({ onSuccess }) {
 
@@ -41,21 +42,21 @@ function RegisterForm({ onSuccess }) {
         <div className="form-container">
             <form>
                 <div>
-                    <label htmlFor="username" className="form-label">Username:</label>
-                    <input type="text" id="username" placeholder="Enter username" onChange={handleChange} value={credentials.username} className="form-input"/>
+                    <label htmlFor="username" className="form-label"></label>
+                    <input type="text" id="username" placeholder="Enter Username" onChange={handleChange} value={credentials.username} className="form-input"/>
                 </div>
                 
                 <div>
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" id="password" placeholder="Password" onChange={handleChange} value={credentials.password} className="form-input"/>
+                    <label htmlFor="password" className="form-label"></label>
+                    <input type="password" id="password" placeholder="Enter Password" onChange={handleChange} value={credentials.password} className="form-input"/>
                 </div>
                 <div>
-                    <label htmlFor="email" className="form-label">Email:</label>
-                    <input type="text" id="email" placeholder="Enter email address" onChange={handleChange} value={credentials.email} className="form-input" />
+                    <label htmlFor="email" className="form-label"></label>
+                    <input type="text" id="email" placeholder="Enter Email Address" onChange={handleChange} value={credentials.email} className="form-input" />
                 </div>
                 {isLoading && <p>Loading</p>}
                 {error && <p>Error: {error}</p>} {/* Display error if it exists */}
-                <button type="submit" onClick={handleSubmit} className="submit-button">Sign up</button>
+                <button type="submit" onClick={handleSubmit} className="submit-button">Register</button>
             </form>
         </div>
     );

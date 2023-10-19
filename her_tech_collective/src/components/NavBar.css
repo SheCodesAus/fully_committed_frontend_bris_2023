@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
 
+
+
 .logo {
     width: 125x; 
     height: 125px; 
     margin-right: 20px; 
     float: left;
-}
-
-#navlinks {
-    justify-content: flex-end;
-    margin-top: 20px;
 }
 
 .menu-toggle {
@@ -60,7 +57,7 @@
         display: none; 
         position: absolute;
         top: 60px;
-        right: 0;
+        right: 20px;
         background: white;
         border: 1px solid #f57657;
         padding: 10px;

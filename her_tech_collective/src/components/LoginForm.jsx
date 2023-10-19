@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
 import postLogin from "../api/post-login.js";
 import getUser from "../api/get-user.js";
-import "./LoginForm.css"
+import "./Form.css"
 
 
 
@@ -69,12 +69,12 @@ function LoginForm() {
         <div className="form-container">
             <form>
                 <div>
-                    <label htmlFor="username" className="form-label">Username:</label>
-                    <input type="text" id="username" placeholder="Enter username" onChange={handleChange} className="form-input" />
+                    <label htmlFor="username" className="form-label"></label>
+                    <input type="text" id="username" placeholder="Username" onChange={handleChange} className="form-input" />
                 </div>
                 
                 <div>
-                    <label htmlFor="password" className="form-label">Password</label>
+                    <label htmlFor="password" className="form-label"></label>
                     <input type="password" id="password" placeholder="Password" onChange={handleChange} className="form-input"/>
                 </div>
                 <button type="submit" onClick={handleSubmit} className="submit-button">Login</button>
