@@ -28,7 +28,7 @@ function NavBar() {
 
 
     return (
-        <div id="navlinks">
+        <div id="navlinks" className="navbar">
             <Link to="/"><img src= "/logo.png" alt="Logo" className="logo" /></Link>
             <div className="menu-toggle" onClick={toggleMenu}>
                 <svg
