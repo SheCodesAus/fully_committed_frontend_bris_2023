@@ -43,6 +43,16 @@
 /* Mobile styles */
 @media (max-width: 991px) {
     .form-container {
-        margin: 30px auto; /* Adjust the margin for mobile devices */
+        justify-content: center; /* Center items on tablet screens */
+    }
+}
+
+/* Media query for mobile screens (e.g., smartphones) */
+@media (max-width: 767px) {
+    .form-container {
+        flex-direction: column; /* Stack items vertically on mobile screens */
+        padding-top: 70px; /* Reduce top padding for better spacing */
+        width: 100%;
+        align-items: center;
     }
 }

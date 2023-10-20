@@ -19,14 +19,18 @@ function ProfilesPage() {
 
     return (
     <>
+    <div className="page-container">
         <div id="profile-list">
             {profiles.map((profileData, key) => {
                 return <ProfileCard key={key} profileData={profileData} />;
             })}
         </div>
+    </div>
     </>
     );
 }
+
+
 
 
 export default ProfilesPage;

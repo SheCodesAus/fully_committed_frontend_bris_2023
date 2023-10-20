@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
 
-
-
 .logo {
     width: 125x; 
     height: 125px; 
@@ -24,9 +22,15 @@
 }
 
 .nav-menu {
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.navbar {
+    background-color: white;
+    /* Other styles for the navbar */
 }
 
 .nav-menu.open a {
