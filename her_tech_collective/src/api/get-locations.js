@@ -1,5 +1,5 @@
 async function getLocations() {
-    const url = `http://127.0.0.1:8000/location/`;
+    const url = `https://hertechcollective.fly.dev/location/`;
     const response = await fetch(url, { method: "Get" });
     if (!response.ok) {
         const fallbackError = "Error to fetch all locations";
