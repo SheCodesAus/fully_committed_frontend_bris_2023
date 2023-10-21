@@ -41,18 +41,10 @@
 }
 
 /* Mobile styles */
+
 @media (max-width: 991px) {
     .form-container {
-        justify-content: center; /* Center items on tablet screens */
-    }
-}
-
-/* Media query for mobile screens (e.g., smartphones) */
-@media (max-width: 767px) {
-    .form-container {
-        flex-direction: column; /* Stack items vertically on mobile screens */
-        padding-top: 70px; /* Reduce top padding for better spacing */
-        width: 100%;
-        align-items: center;
+        max-width: 80%; /* Adjust this percentage as needed */
+        margin: 50px auto 0;
     }
 }
