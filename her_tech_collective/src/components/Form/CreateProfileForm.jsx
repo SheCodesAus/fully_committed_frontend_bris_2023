@@ -19,7 +19,8 @@ function CreateProfileForm() {
   const [skills, setSkills] = useState([]);
   const [locations, setLocations] = useState([]);
  const [isLoading, setIsLoading] = useState(true);
- const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
+  const [query, setQuery] = useState([]);
 
   
   
@@ -80,23 +81,46 @@ function CreateProfileForm() {
       setProfileData({ ...profileData, location: locationData });
     }
     
-    else if (id === "skills") {
-      // Change skills to an array of integers
-      const selectedSkills = Array.from(selectedOptions).map((option) =>
-        JSON.parse(option.value)
-      );
+    // else if (id === "skills") {
+    //   // Change skills to an array of integers
+    //   const selectedSkills = Array.from(selectedOptions).map((option) =>
+    //     JSON.parse(option.value)
+    //   );
      
-      setProfileData({ ...profileData, skills: selectedSkills });
+    //   setProfileData({ ...profileData, skills: selectedSkills });
       
-    }
+    // }
     // setProfileData({ ...profileData });
 
   };
 
+
+
+
+const handleQueryChange = (event) => {
+  const checkedSkill = JSON.parse(event.target.value);
+  // console.log("Event:", event.target.value);
+  const updatedQuery = [...query, checkedSkill]; // Update query
+  // console.log("checked skills:", updatedQuery);
+
+  setQuery(updatedQuery); // Update query state
+
+  // Now update profileData with the updated skills
+  setProfileData({
+    ...profileData,
+    skills: updatedQuery,
+  });
+};
+
+
+
+  
+  
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true);
-
+    setIsLoading(true)
     postProfile(profileData)
       .then(() => {
         navigate("/");
@@ -190,25 +214,28 @@ function CreateProfileForm() {
         </div>
         <div>
           <label htmlFor="skills">Skills</label>
-          {/* <select id="skills">
-            <option value="Python">Python</option>
-            <option value="React">React</option>
-          </select> */}
-          {/* <ul>
-            {skills.map((skill) => (
-              <li key={skill.id}>{skill.skill_name}</li>
-            ))}
-          </ul> */}
-          <select id="skills" multiple onChange={handleSelected}>
+          <div id="skills">
             {skills.map((item) => (
-              <option
-                key={item.id}
-                value={JSON.stringify(item)}
-              >
+              <label key={item.id}>
+                <input
+                  type="checkbox"
+                  id={item.id}
+                  name={item.skill_name}
+                  value={JSON.stringify(item)}
+                  onChange={handleQueryChange}
+                />
+                {item.skill_name}
+              </label>
+            ))}
+          </div>
+
+          {/* <select id="skills" multiple required onChange={handleSelected}>
+            {skills.map((item) => (
+              <option key={item.id} value={JSON.stringify(item)}>
                 {item.skill_name}
               </option>
             ))}
-          </select>
+          </select> */}
         </div>
         <input type="submit" value="Submit"></input>
       </form>
