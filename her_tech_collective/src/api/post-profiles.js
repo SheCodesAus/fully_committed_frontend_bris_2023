@@ -1,6 +1,6 @@
 async function postProfile(profileData) {
   //   const url = `${import.meta.env.VITE_API_URL}/profiles/`;
-  const url = `http://127.0.0.1:8000/profiles/`;
+  const url = `https://hertechcollective.fly.dev/profiles/`;
   // Log the profileData before making the POST request
   console.log("Profile Data to be Posted:", profileData);
   const response = await fetch(url, {
