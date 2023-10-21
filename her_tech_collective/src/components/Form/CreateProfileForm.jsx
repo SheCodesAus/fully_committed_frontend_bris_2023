@@ -13,7 +13,7 @@ function CreateProfileForm() {
       bio: "",
       is_active: false,
       location: null,
-      skills: [],
+      skills: null,
       date_created: new Date().toISOString(),
     });
   const [skills, setSkills] = useState([]);
@@ -70,6 +70,7 @@ function CreateProfileForm() {
   //      setProfileData({ ...profileData, [id]: value });
   //    }
   //  };
+  console.log(profileData);
   const handleSelected = (event) => {
     const { id, value, type, options, selectedOptions } = event.target;
 
@@ -77,13 +78,19 @@ function CreateProfileForm() {
       // Change location to an object
       const locationData = JSON.parse(value);
       setProfileData({ ...profileData, location: locationData });
-    } else if (id === "skills") {
+    }
+    
+    else if (id === "skills") {
       // Change skills to an array of integers
       const selectedSkills = Array.from(selectedOptions).map((option) =>
-        parseInt(option.value)
+        JSON.parse(option.value)
       );
+     
       setProfileData({ ...profileData, skills: selectedSkills });
+      
     }
+    // setProfileData({ ...profileData });
+
   };
 
   const handleSubmit = (e) => {
@@ -194,7 +201,10 @@ function CreateProfileForm() {
           </ul> */}
           <select id="skills" multiple onChange={handleSelected}>
             {skills.map((item) => (
-              <option key={item.id} value={item.id}>
+              <option
+                key={item.id}
+                value={JSON.stringify(item)}
+              >
                 {item.skill_name}
               </option>
             ))}
