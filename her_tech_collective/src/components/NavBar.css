@@ -29,8 +29,13 @@
 }
 
 .navbar {
+    position: fixed; /* Change from 'position: sticky' to 'position: fixed' */
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: white;
     /* Other styles for the navbar */
+    z-index: 1000;
 }
 
 .nav-menu.open a {
@@ -72,5 +77,10 @@
 
     .nav-menu.open {
         display: flex; 
+    }
+
+    .hamburger-icon {
+        margin-top: 45px;
+        margin-right: 20px;
     }
 }

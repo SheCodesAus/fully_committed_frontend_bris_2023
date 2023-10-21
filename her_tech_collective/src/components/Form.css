@@ -44,6 +44,7 @@
 @media (max-width: 991px) {
     .form-container {
         justify-content: center; /* Center items on tablet screens */
+        margin-top: 200px;
     }
 }
 
@@ -52,7 +53,12 @@
     .form-container {
         flex-direction: column; /* Stack items vertically on mobile screens */
         padding-top: 70px; /* Reduce top padding for better spacing */
-        width: 100%;
+        width: 75%;
         align-items: center;
+        margin-top: 200px;
+    }
+
+    .form-container div:first-child {
+        padding-top: 0px; /* Add padding to the top of the first div containing the input */
     }
 }
