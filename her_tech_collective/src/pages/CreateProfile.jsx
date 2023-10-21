@@ -1,5 +1,8 @@
+import CreateProfileForm from "../components/Form/CreateProfileForm";
+
 function CreateProfilePage() {
-    return <h1> Create a new profile</h1>
+    
+    return <CreateProfileForm />
 }
 
 export default CreateProfilePage;

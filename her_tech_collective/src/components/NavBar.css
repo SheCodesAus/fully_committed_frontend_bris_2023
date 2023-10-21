@@ -7,11 +7,6 @@
     float: left;
 }
 
-#navlinks {
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
 .menu-toggle {
     display: none; 
     cursor: pointer;
@@ -27,9 +22,15 @@
 }
 
 .nav-menu {
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.navbar {
+    background-color: white;
+    /* Other styles for the navbar */
 }
 
 .nav-menu.open a {
@@ -60,7 +61,7 @@
         display: none; 
         position: absolute;
         top: 60px;
-        right: 0;
+        right: 20px;
         background: white;
         border: 1px solid #f57657;
         padding: 10px;

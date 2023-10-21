@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import "./ProfileCard.css";
 
 function ProfileCard(props) {
