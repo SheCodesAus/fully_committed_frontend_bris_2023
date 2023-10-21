@@ -28,6 +28,7 @@ function NavBar() {
 
 
     return (
+        <>
         <div id="navlinks" className="navbar">
             <Link to="/"><img src= "/logo.png" alt="Logo" className="logo" /></Link>
             <div className="menu-toggle" onClick={toggleMenu}>
@@ -44,6 +45,7 @@ function NavBar() {
                 />
             </svg>
         </div>
+        <div className="nav-menu-container">
         <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
@@ -61,12 +63,16 @@ function NavBar() {
                         <Link to="/register/" onClick={closeMenu}>Register</Link>
                     </>
                 )}
-
+            
 
             </nav>
+            </div>
+        </div>
+            
 
             <Outlet />
-        </div>
+            
+        </>
     );
 }
 

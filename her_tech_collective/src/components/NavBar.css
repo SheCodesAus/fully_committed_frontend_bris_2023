@@ -3,13 +3,42 @@
 .logo {
     width: 125x; 
     height: 125px; 
-    margin-right: 20px; 
-    float: left;
 }
 
-.menu-toggle {
-    display: none; 
-    cursor: pointer;
+.navbar {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.nav-menu-container {
+    justify-content: flex-end; /* Move the .nav-menu to the right */
+    display: flex;
+}
+
+.nav-menu {
+    margin-top: 50px;
+    margin-left: 10px; /* Add margin between menu items if needed */
+}
+
+.nav-menu a {
+    text-decoration: none; 
+    font-family: 'Raleway', sans-serif;
+    color: #f57657; 
+    margin: 10px;
+    font-weight: bold; 
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-menu.open a {
+    margin: 10px 10px; 
+}
+
+.nav-menu a:hover {
+    color: #f4c75f;
+    border-color: #f4c75f;
 }
 
 .hamburger-icon {
@@ -18,38 +47,15 @@
     fill: #f57657; 
     cursor: pointer;
     transition: 0.4s;
-    float: right;
+    margin-top: 45px;
+    position: absolute; /* Use absolute positioning */
+    top: 10px;
+    right: 20px;
 }
 
-.nav-menu {
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.navbar {
-    background-color: white;
-    /* Other styles for the navbar */
-}
-
-.nav-menu.open a {
-    margin: 10px 10px; 
-}
-
-.nav-menu a {
-    text-decoration: none; 
-    font-family: 'Raleway', sans-serif;
-    color: #f57657; 
-    margin: 50px 10px 10px;
-    font-weight: bold; 
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #f4c75f;
-    border-color: #f4c75f;
+.menu-toggle {
+    display: none; 
+    cursor: pointer;
 }
 
 @media (max-width: 991px) {
