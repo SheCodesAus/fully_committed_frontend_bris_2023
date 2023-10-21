@@ -41,24 +41,10 @@
 }
 
 /* Mobile styles */
+
 @media (max-width: 991px) {
     .form-container {
-        justify-content: center; /* Center items on tablet screens */
-        margin-top: 200px;
-    }
-}
-
-/* Media query for mobile screens (e.g., smartphones) */
-@media (max-width: 767px) {
-    .form-container {
-        flex-direction: column; /* Stack items vertically on mobile screens */
-        padding-top: 70px; /* Reduce top padding for better spacing */
-        width: 75%;
-        align-items: center;
-        margin-top: 200px;
-    }
-
-    .form-container div:first-child {
-        padding-top: 0px; /* Add padding to the top of the first div containing the input */
+        max-width: 80%; /* Adjust this percentage as needed */
+        margin: 50px auto 0;
     }
 }
