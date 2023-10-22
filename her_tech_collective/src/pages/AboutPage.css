@@ -1,30 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
 
 .about{
-    width:100%;
     height:auto;
-    background-color: #f7f7f7;
-    margin: 30px auto;
-    border-radius: 20px;
+    background-color: #fff6cc;
+    margin-top: 20px;
+    padding-bottom: 20px;
     padding-top: 15px;
-    padding-left: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
     font-family: 'Raleway', sans-serif;
+    line-height: 2;
+}
+
+.about h1 {
+    border-bottom: 1px solid #f57657;
+}
+
+.textandimage {
+    display: flex; /* Use Flexbox to create a two-column layout */
+    align-items: center;
+    background-color: #fff6cc;
+    padding-bottom: 50px;
 }
 
 .dotpoints{
-    width:75%;
-    height:auto;
-    background-color: #f4c75f;
-    margin: 30px auto;
-    border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    flex: 1;
     font-family: 'Raleway', sans-serif;
+    padding-left: 60px;
 }
 
-.aboutimg img{
-    width: 100%;
+.dotpoints h2 {
+    border-bottom: 1px solid #f57657;
+}
+
+.dotpoints p {
+    line-height: 1.5;
+}
+
+.aboutimg img {
+    display: block; /* Make sure the image is a block element */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     height: 100%;
+    flex: 1;
+    border-radius: 10px;
 }

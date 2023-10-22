@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import getSkills from "../../api/get-skills";
 import getLocations from "../../api/get-locations";
 import postProfile from "../../api/post-profiles";
+import "./CreateProfileForm.css"
 
 
 function CreateProfileForm() {
@@ -131,63 +132,58 @@ const handleQueryChange = (event) => {
   };
 
     return (
-      <form onSubmit={handleSubmit}>
-        <h1>Create Her Tech Collective Profile</h1>
-        <div>
-          <label htmlFor="profile_name">Profile Name</label>
-          <input
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <h1>Create Her Tech Collective Profile</h1>
+          <div>
+              <label htmlFor="profile_name"></label>
+              <input
             id="profile_name"
             type="text"
-            placeholder="Enter profile name"
-            onChange={handleChange}
-          ></input>
+            placeholder="Profile name"
+            onChange={handleChange}/>
         </div>
         <div>
-          <label htmlFor="job_title">Job Title</label>
+          <label htmlFor="job_title"></label>
           <input
             id="job_title"
             type="text"
-            placeholder="Enter profile name"
-            onChange={handleChange}
-          ></input>
+            placeholder="Job Title"
+            onChange={handleChange}/>
         </div>
         <div>
-          <label htmlFor="linkedin_url">LinkedIn URL</label>
+          <label htmlFor="linkedin_url"></label>
           <input
             id="linkedin_url"
             type="url"
-            placeholder="Enter LinkedIn URL"
-            onChange={handleChange}
-          ></input>
+            placeholder="LinkedIn URL"
+            onChange={handleChange}/>
         </div>
         <div>
-          <label htmlFor="image_url">Image URL</label>
+          <label htmlFor="image_url"></label>
           <input
             id="image_url"
             type="url"
-            placeholder="Enter Image URL"
-            onChange={handleChange}
-          ></input>
+            placeholder="Image URL"
+            onChange={handleChange}/>
         </div>
         <div>
-          <label htmlFor="bio">Bio</label>
+          <label htmlFor="bio"></label>
           <input
             id="bio"
             type="textarea"
-            placeholder="Enter Bio"
-            onChange={handleChange}
-          ></input>
+            placeholder="Bio"
+            onChange={handleChange}/>
         </div>
-        <div>
+        <div className="isactive">
           <label htmlFor="is_active">Is_active</label>
           <input
             id="is_active"
             type="checkbox"
-            onChange={handleChecked}
-          ></input>
+            onChange={handleChecked}/>
         </div>
         <div>
-          <label htmlFor="location">Location</label>
+          <label htmlFor="location" style={{ marginRight: '20px' }}>Location</label>
           {/* <select id="location">
             <option value="Brisbane">Brisbane</option>
             <option value="Sydney">Sydney</option>
@@ -237,8 +233,9 @@ const handleQueryChange = (event) => {
             ))}
           </select> */}
         </div>
-        <input type="submit" value="Submit"></input>
+        <input type="submit" value="Submit" className="submit-button"></input>
       </form>
+      </div>
     );
 }
 export default CreateProfileForm;
