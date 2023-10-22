@@ -19,7 +19,7 @@ function AboutPage() {
             is a step toward a more diverse and innovative tech community.
             </p>
             </section>
-            
+            <section className="textandimage">
             <section className="dotpoints">
             <h2>Get the most out of this site...</h2>
             <ul>
@@ -32,12 +32,16 @@ function AboutPage() {
             <li><h3>Development</h3></li>
             <p>Get some inspiration for your next development goal and make contact to discuss how best to gain that skill or attribute</p>
             </ul>
-            <h2>Don't forget to have fun!</h2>
+            <h4>Don't forget to have fun!</h4>
             </section>
             <section className="aboutimg">
             <img src= "https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Like a Boss" />  
             </section>
-        </div>
+            </section>
+            <div className="footer">
+            <h1>Powered by Fully Committed 🚀</h1>
+            </div>
+            </div>
 
     );   
 
