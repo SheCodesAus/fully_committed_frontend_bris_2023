@@ -1,7 +1,12 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import useProfile from "../hooks/use-profile";
 import "./ProfilePage.css";
 import deleteProfile from "../api/delete-profile";
+import { useAuth } from "../hooks/use-auth";
+import { Link } from "react-router-dom";
+
+
 
 function ProfilePage() {
 
@@ -11,6 +16,8 @@ function ProfilePage() {
 
      // useProfile returns three pieces of info, so we need to grab them all here
     const {profile, isLoading, error} = useProfile(id)
+
+    const {auth, setAuth} = useAuth();
 
     // Setting up delete confirmation
 
@@ -56,9 +63,15 @@ function ProfilePage() {
         };
 
 
-    const renderUpdateAndDeleteButtons = () => {
+        //todo - this should be its own component, defined in another file
+        //todo - we need to define userId and the owner inside the component
+
+    const RenderUpdateAndDeleteButtons = () => {
         // Check if the authenticated user is the owner of the project
-        if (parseInt(auth.userId) == parseInt(profile.owner)) {
+
+        console.log("PROFILEPAGE USERID:", auth.userId, "PROFILEPAGE OWNER", profile.owner)
+        
+        if (parseInt(auth.userId) == parseInt(profile.owner.id)) {
           // Authenticated user is the owner, render the buttons
             return (
                 <>
@@ -99,7 +112,9 @@ function ProfilePage() {
                         <button onClick={handleCancelDelete}>No</button>
                     </div>
                 )}
-                {renderUpdateAndDeleteButtons()}
+
+                <RenderUpdateAndDeleteButtons />
+                
         </div>
     </main>
     );
