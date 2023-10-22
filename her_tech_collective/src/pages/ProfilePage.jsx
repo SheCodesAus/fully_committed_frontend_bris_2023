@@ -1,10 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
 import useProfile from "../hooks/use-profile";
 import "./ProfilePage.css";
-import deleteProfile from "../api/delete-profile";
-import { useAuth } from "../hooks/use-auth";
-import { Link } from "react-router-dom";
+import ProfileActions from "../components/ProfileActions";
 
 
 
@@ -13,18 +10,9 @@ function ProfilePage() {
     // Here we use a hook that comes for free in react router called `useParams`to get the id from the URL so that we can pass it to our useProfile hook.
     const { id } = useParams();
     
-
      // useProfile returns three pieces of info, so we need to grab them all here
-    const {profile, isLoading, error} = useProfile(id)
+    const {profile, isLoading, error} = useProfile(id);
 
-    const {auth, setAuth} = useAuth();
-
-    // Setting up delete confirmation
-
-    const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
-
-    // console.log("I am still looking for the profile: ", isLoading)
-    console.log("Testing profile: ", profile)
 
 
     if (isLoading) {
@@ -34,59 +22,6 @@ function ProfilePage() {
     if (error) {
         return (<p>{error.message}</p>);
         }
-
-
-
-    // Handle project deletion
-
-    const handleDelete = () => {
-        // Show the delete confirmation
-        setShowDeleteConfirmation(true);
-    };
-
-    const handleConfirmDelete = () => {
-        // delete profile
-            deleteProfile(id)
-            .then(() => {
-                //Redirect to the homepage
-                navigate("/");
-            })
-            .catch ((error) => {
-                console.log("Error deleting profile: ", error);
-                // Handle error, e.g., display an error message to the user
-            });
-        };
-
-    const handleCancelDelete = () => {
-        // Hide the delete confirmation
-        setShowDeleteConfirmation(false);
-        };
-
-
-        //todo - this should be its own component, defined in another file
-        //todo - we need to define userId and the owner inside the component
-
-    const RenderUpdateAndDeleteButtons = () => {
-        // Check if the authenticated user is the owner of the project
-
-        console.log("PROFILEPAGE USERID:", auth.userId, "PROFILEPAGE OWNER", profile.owner)
-        
-        if (parseInt(auth.userId) == parseInt(profile.owner.id)) {
-          // Authenticated user is the owner, render the buttons
-            return (
-                <>
-                    <button className="delete-button" onClick={handleDelete}>
-                    Delete Profile
-                    </button>
-                    <button className="update-button">
-                        <Link to={`/update-profile/${profile.id}`}>Update Profile</Link>
-                    </button>
-                </>
-            );
-        }
-        // Authenticated user is not the owner, do not render the buttons
-        return null;
-        };
 
 
     return (
@@ -104,18 +39,9 @@ function ProfilePage() {
                         <li key={skill.id}>{skill.skill_name}</li>
                     ))}
                 </ul>
-            </h4>
-            {showDeleteConfirmation && (
-                    <div className="delete-confirmation">
-                        <p>Are you sure you want to delete this profile?</p>
-                        <button onClick={handleConfirmDelete}>Yes</button>
-                        <button onClick={handleCancelDelete}>No</button>
-                    </div>
-                )}
-
-                <RenderUpdateAndDeleteButtons />
-                
+            </h4>                
         </div>
+        <ProfileActions profile={profile} />
     </main>
     );
 }
