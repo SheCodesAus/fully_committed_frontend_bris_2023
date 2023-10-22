@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-between; /* Distribute cards evenly */
     margin-top: 20px;
+
 }
 
 @media (max-width: 991px) {
