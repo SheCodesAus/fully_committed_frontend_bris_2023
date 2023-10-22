@@ -1,34 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
 
+.form-container h1 {
+    margin: 40px auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
 .form-container {
     max-width: 600px;
-    margin: 0px auto;
     display: block;
     border: 1px solid #f57657;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    text-align: left;
 }
 
-.form-container h1 {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.form-container input {
+input {
     width: 75%;
     margin: 10px auto;
-    padding: 15px;
+    padding: 10px;
     font-size: 20px;
     border: none;
     border-bottom: 2px solid #ccc;
+    cursor: pointer;
 }
 
-.form-container input:focus {
+input:focus {
     outline: none; /* Remove the default focus outline */
     border-bottom: 2px solid #f57657; /* Change the bottom border color on focus to orange */
+}
+
+.isactive {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+/* Add space between the location text and the dropdown box */
+.isactive label[for="location"] {
+    margin-right: 10px; /* Adjust the value to control the space */
+}
+
+select#location {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #f57657;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 80px;
+}
+
+#skills label {
+    display: inline-block;
+    margin: 20px 0;
+    margin-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#skills input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 .submit-button {
@@ -37,10 +70,13 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
-    margin: 20px auto;
+    margin: 0 auto;
+    display: block;
     transition: all 100ms ease-in-out;
     font-size: 16px;
     border: none;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 /* Mobile styles */

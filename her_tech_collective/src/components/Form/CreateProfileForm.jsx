@@ -133,16 +133,15 @@ const handleQueryChange = (event) => {
 
     return (
       <div className="form-container">
-      <form onSubmit={handleSubmit}>
-        <h1>Create Her Tech Collective Profile</h1>
-        <div>
-          <label htmlFor="profile_name"></label>
-          <input
+        <form onSubmit={handleSubmit}>
+          <h1>Create Her Tech Collective Profile</h1>
+          <div>
+              <label htmlFor="profile_name"></label>
+              <input
             id="profile_name"
             type="text"
             placeholder="Profile name"
-            onChange={handleChange}
-          ></input>
+            onChange={handleChange}/>
         </div>
         <div>
           <label htmlFor="job_title"></label>
@@ -150,8 +149,7 @@ const handleQueryChange = (event) => {
             id="job_title"
             type="text"
             placeholder="Job Title"
-            onChange={handleChange}
-          ></input>
+            onChange={handleChange}/>
         </div>
         <div>
           <label htmlFor="linkedin_url"></label>
@@ -159,8 +157,7 @@ const handleQueryChange = (event) => {
             id="linkedin_url"
             type="url"
             placeholder="LinkedIn URL"
-            onChange={handleChange}
-          ></input>
+            onChange={handleChange}/>
         </div>
         <div>
           <label htmlFor="image_url"></label>
@@ -168,8 +165,7 @@ const handleQueryChange = (event) => {
             id="image_url"
             type="url"
             placeholder="Image URL"
-            onChange={handleChange}
-          ></input>
+            onChange={handleChange}/>
         </div>
         <div>
           <label htmlFor="bio"></label>
@@ -177,19 +173,17 @@ const handleQueryChange = (event) => {
             id="bio"
             type="textarea"
             placeholder="Bio"
-            onChange={handleChange}
-          ></input>
+            onChange={handleChange}/>
         </div>
-        <div>
+        <div className="isactive">
           <label htmlFor="is_active">Is_active</label>
           <input
             id="is_active"
             type="checkbox"
-            onChange={handleChecked}
-          ></input>
+            onChange={handleChecked}/>
         </div>
         <div>
-          <label htmlFor="location">Location</label>
+          <label htmlFor="location" style={{ marginRight: '20px' }}>Location</label>
           {/* <select id="location">
             <option value="Brisbane">Brisbane</option>
             <option value="Sydney">Sydney</option>

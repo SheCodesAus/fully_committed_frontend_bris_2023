@@ -1,5 +1,5 @@
 import { useState } from "react";
-import postRegister from "../api/post-register";
+import postRegister from "../../api/post-register.js";
 import "./Form.css"
 
 function RegisterForm({ onSuccess }) {
