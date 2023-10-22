@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
+
+.form-container {
+    max-width: 600px;
+    margin: 0px auto;
+    display: block;
+    border: 1px solid #f57657;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left;
+}
+
+.form-container h1 {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.form-container input {
+    width: 75%;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+.form-container input:focus {
+    outline: none; /* Remove the default focus outline */
+    border-bottom: 2px solid #f57657; /* Change the bottom border color on focus to orange */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color:#f57657;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: all 100ms ease-in-out;
+    font-size: 16px;
+    border: none;
+}
+
+/* Mobile styles */
+
+@media (max-width: 991px) {
+    .form-container {
+        max-width: 80%; /* Adjust this percentage as needed */
+        margin: 50px auto 0;
+    }
+}

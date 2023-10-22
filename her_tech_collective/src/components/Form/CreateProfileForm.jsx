@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import getSkills from "../../api/get-skills";
 import getLocations from "../../api/get-locations";
 import postProfile from "../../api/post-profiles";
+import "./CreateProfileForm.css"
 
 
 function CreateProfileForm() {
@@ -107,50 +108,51 @@ function CreateProfileForm() {
   };
 
     return (
+      <div className="form-container">
       <form onSubmit={handleSubmit}>
         <h1>Create Her Tech Collective Profile</h1>
         <div>
-          <label htmlFor="profile_name">Profile Name</label>
+          <label htmlFor="profile_name"></label>
           <input
             id="profile_name"
             type="text"
-            placeholder="Enter profile name"
+            placeholder="Profile name"
             onChange={handleChange}
           ></input>
         </div>
         <div>
-          <label htmlFor="job_title">Job Title</label>
+          <label htmlFor="job_title"></label>
           <input
             id="job_title"
             type="text"
-            placeholder="Enter profile name"
+            placeholder="Job Title"
             onChange={handleChange}
           ></input>
         </div>
         <div>
-          <label htmlFor="linkedin_url">LinkedIn URL</label>
+          <label htmlFor="linkedin_url"></label>
           <input
             id="linkedin_url"
             type="url"
-            placeholder="Enter LinkedIn URL"
+            placeholder="LinkedIn URL"
             onChange={handleChange}
           ></input>
         </div>
         <div>
-          <label htmlFor="image_url">Image URL</label>
+          <label htmlFor="image_url"></label>
           <input
             id="image_url"
             type="url"
-            placeholder="Enter Image URL"
+            placeholder="Image URL"
             onChange={handleChange}
           ></input>
         </div>
         <div>
-          <label htmlFor="bio">Bio</label>
+          <label htmlFor="bio"></label>
           <input
             id="bio"
             type="textarea"
-            placeholder="Enter Bio"
+            placeholder="Bio"
             onChange={handleChange}
           ></input>
         </div>
@@ -210,8 +212,9 @@ function CreateProfileForm() {
             ))}
           </select>
         </div>
-        <input type="submit" value="Submit"></input>
+        <input type="submit" value="Submit" className="submit-button"></input>
       </form>
+      </div>
     );
 }
 export default CreateProfileForm;
