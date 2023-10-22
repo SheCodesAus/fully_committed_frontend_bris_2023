@@ -6,7 +6,9 @@ import "./ProfilesPage.css";
 
 function ProfilesPage() {
 
-    const {profiles, isLoading, error } = useProfiles()
+    const {profiles, isLoading, error } = useProfiles();
+
+
     console.log("I am still looking for the profile: ", isLoading, "!Right now I have", profiles, error)
 
     if (isLoading) {

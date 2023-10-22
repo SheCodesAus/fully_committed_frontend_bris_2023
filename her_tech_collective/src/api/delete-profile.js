@@ -1,6 +1,6 @@
 async function deleteProfile(profile_id) {
     
-    const url =`https://hertechcollective.fly.dev/projects/${profile_id}`;
+    const url =`https://hertechcollective.fly.dev/profiles/${profile_id}`;
     const response = await fetch(url, { 
             method:"DELETE",
             headers: {
@@ -12,7 +12,7 @@ async function deleteProfile(profile_id) {
     // Check if the request was successful
 
         if (!response.ok) {
-            const fallbackError =`Error deleting project with id ${profile_id}`;
+            const fallbackError =`Error deleting profile with id ${profile_id}`;
             const data = await response.json().catch(() => {
                 throw new Error(fallbackError);
         });
