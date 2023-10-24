@@ -12,6 +12,7 @@ import RegisterPage from './pages/RegisterPage';
 import CreateProfilePage from './pages/CreateProfile';
 import ProfilesPage from './pages/ProfilesPage';
 import ProfilePage from './pages/ProfilePage';
+import UpdateProfilePage from './pages/UpdateProfilePage';
 
 //Importing components
 import NavBar from './components/NavBar';
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "/register/", element: <RegisterPage />},
       { path: "/profiles/create/", element: <CreateProfilePage />},
       { path: "/profiles/:id/", element: <ProfilePage />},
+      {path: "/update-profile/:id/", element: <UpdateProfilePage />},
     ] 
   }
 ]);
