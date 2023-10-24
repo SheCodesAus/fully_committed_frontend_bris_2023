@@ -1,26 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,700;1,400&display=swap');
 
+.page-container {
+    background-color: #fff6cc;
+    padding: 10px;
+}
+
 main {
-    max-width: 100%;
     margin: 32px 44px 32px;
     padding: 0px 16px;
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid #f57657;
     border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-
 }
-
-
 
 .font-weight-normal {
     font-weight: normal;
 }
-
-
-
 
 .profile-page {
     margin-top: 20px;
@@ -28,21 +26,9 @@ main {
     margin: 10px;
 }
 
-.profile-page img {
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.profile-page h3 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-}
-
 .profile-page h4 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    margin-top: -10px;
 }
 
 .linkedin_url {
@@ -56,20 +42,8 @@ main {
     text-decoration: none;
 }
 
-.profile-page h3,
-.profile-page h4 {
-    text-decoration: none !important;
-    color: black;
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-    .profile-page {
-        width: 43%;
-    }
-}
-
-@media (max-width: 767px) {
-    .profile-page {
-        width: 75%;
+@media (max-width: 991px) {
+    .profile-page img {
+    height: 75%;
     }
 }

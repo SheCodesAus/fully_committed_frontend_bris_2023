@@ -25,10 +25,11 @@ function ProfilePage() {
 
 
     return (
+    <div className="page-container">
     <main>
         <div id="profile-info">
             <h1 className="profile-page">{profile.profile_name}</h1>
-            <img className="profile-image" src={profile.image_url} />
+            <img src={profile.image_url} />
             <h4 className="profile-page">Job title: <span className="font-weight-normal">{profile.job_title}</span> </h4>
             <h4 className="profile-page">LinkedIn profile: <a className="linkedin_url" href="{profile.linkedin_url}">{profile.linkedin_url}</a></h4>
             <h4 className="profile-page">Bio: <span className="font-weight-normal">{profile.bio}</span></h4>
@@ -39,10 +40,11 @@ function ProfilePage() {
                         <li key={skill.id}>{skill.skill_name}</li>
                     ))}
                 </ul>
-            </h4>                
+            </h4>
         </div>
         <ProfileActions profile={profile} />
     </main>
+    </div>
     );
 }
 

@@ -24,7 +24,6 @@
 }
 
 .dotpoints{
-    flex: 1;
     font-family: 'Raleway', sans-serif;
     padding-left: 60px;
 }
@@ -41,8 +40,19 @@
     display: block; /* Make sure the image is a block element */
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    height: 100%;
-    flex: 1;
+    width: 70%;
+    height: 90%;
     border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+    .textandimage {
+        display: flex;
+        flex-direction: column; /* Change the direction to column */
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .dotpoints {
+        padding-right: 30%;
+    }
 }
