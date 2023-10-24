@@ -27,7 +27,6 @@ function ProfileActions({ profile }) {
         // delete profile
             deleteProfile(id)
             .then(() => {
-
                 navigate(`/profiles/`);
             })
             .catch ((error) => {
@@ -54,7 +53,7 @@ function ProfileActions({ profile }) {
                     Delete Profile
                     </button>
                     <button className="update-button">
-                        <Link to={`/update-profile/${profile.id}`}>Update Profile</Link>
+                        <Link to={`/update-profile/${profile.id}/`}>Update Profile</Link>
                     </button>
                 </>
             );
