@@ -1,5 +1,5 @@
 async function putProfile(profile_id, updatedProfileData, token) {
-    const url = `https://hertechcollective.fly.dev/projects/${project_id}/`;
+    const url = `https://hertechcollective.fly.dev/profiles/${profile_id}/`;
 
     const method = "PUT";
 
@@ -20,7 +20,7 @@ async function putProfile(profile_id, updatedProfileData, token) {
 
       // Check if the request was successful.
         if (!response.ok) {
-        const fallbackError = `Error updating project with ID ${profile_id}`;
+        const fallbackError = `Error updating profile with ID ${profile_id}`;
 
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);
