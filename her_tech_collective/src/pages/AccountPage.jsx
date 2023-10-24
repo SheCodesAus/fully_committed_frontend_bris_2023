@@ -4,7 +4,6 @@ import useProfiles from "../hooks/use-profiles";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 
 
-
 function AccountPage() {
 
     // Here we use a hook that comes for free in react router called `useParams`to get the id from the URL so that we can pass it to our useProfile hook.
@@ -47,16 +46,15 @@ function AccountPage() {
     return (
     <main>
         <div id="account-info">
-            <h1 className="account-page">Username: {user.username}</h1>
+            <h1>Welcome to your account! Here are your details:</h1>
+            <h4 className="account-page">Username: {user.username}</h4>
             <h4 className="account-page">Email address: <span className="font-weight-normal">{user.email}</span> </h4>
             <h4 className="account-page">Date joined: <span className="font-weight-normal">{formatDate(dateString)}</span></h4>
-            <div className="page-container">
                 <div id="profile-list">
                     {userProfiles.map((profileData, key) => {
                         return <ProfileCard key={key} profileData={profileData} />;
                     })}
                 </div>
-            </div>     
         </div>
     </main>
     );
