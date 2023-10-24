@@ -23,7 +23,7 @@ function UpdateProfilePage() {
                 <h1>The profile has been successfully updated</h1>
             ) : profile ? (
                 <div>
-                    <h2 className="update-profile-header">Update Profile </h2>
+                    <h2 className="update-profile-header"></h2>
                     <UpdateProfile profile={profile} onSuccess={handleSuccess} /> {/* Pass the project prop */}
                 </div>
             ) : isLoading ? (

@@ -8,7 +8,7 @@
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distribute cards evenly */
+    /* justify-content: space-between; Distribute cards evenly */
     margin-top: 20px;
 
 }
