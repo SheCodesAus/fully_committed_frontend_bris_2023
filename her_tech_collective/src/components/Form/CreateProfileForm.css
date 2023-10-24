@@ -79,6 +79,15 @@ select#location {
     margin-top: 20px;
 }
 
+
+.submit-button:hover {
+    background-color: #ff3c20;
+}
+
+.submit-button:active {
+    transform: scale(0.95);
+}
+
 /* Mobile styles */
 
 @media (max-width: 991px) {
