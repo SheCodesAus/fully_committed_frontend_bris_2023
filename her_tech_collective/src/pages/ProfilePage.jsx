@@ -27,13 +27,13 @@ function ProfilePage() {
     return (
     <main>
         <div id="profile-info">
-            <h1>{profile.profile_name}</h1>
+            <h1 className="profile-page">{profile.profile_name}</h1>
             <img className="profile-image" src={profile.image_url} />
-            <h4>Job title: <span className="font-weight-normal">{profile.job_title}</span> </h4>
-            <h4>LinkedIn profile: <a className="font-weight-normal" href="{profile.linkedin_url}">{profile.linkedin_url}</a></h4>
-            <h4>Bio: <span className="font-weight-normal">{profile.bio}</span></h4>
-            <h4>Location: <span className="font-weight-normal">{profile.location.location_name}</span></h4>
-            <h4>Skills: 
+            <h4 className="profile-page">Job title: <span className="font-weight-normal">{profile.job_title}</span> </h4>
+            <h4 className="profile-page">LinkedIn profile: <a className="linkedin_url" href="{profile.linkedin_url}">{profile.linkedin_url}</a></h4>
+            <h4 className="profile-page">Bio: <span className="font-weight-normal">{profile.bio}</span></h4>
+            <h4 className="profile-page">Location: <span className="font-weight-normal">{profile.location.location_name}</span></h4>
+            <h4 className="profile-page">Skills: 
                 <ul>
                     {profile.skills.map((skill) => (
                         <li key={skill.id}>{skill.skill_name}</li>
