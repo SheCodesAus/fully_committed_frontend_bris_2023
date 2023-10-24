@@ -19,65 +19,65 @@ function CreateProfileForm() {
     });
   const [skills, setSkills] = useState([]);
   const [locations, setLocations] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [query, setQuery] = useState([]);
 
   
   
-//  useEffect(() => {
-//    getSkills()
-//      .then((skillsData) => {
-//        setSkills(skillsData);
-//        setIsLoading(false);
-//      })
-//      .catch((error) => {
-//        setError(error);
-//        setIsLoading(false);
-//      });
-//    getLocations()
-//      .then((locationsData) => {
-//        setLocations(locationsData);
-//      })
-//      .catch((error) => {
-//        setError(error);
-//      });
-//  }, []);
-const [skillsIsLoading, setSkillsIsLoading] = useState(true);
-const [locationsIsLoading, setLocationsIsLoading] = useState(true);
+ useEffect(() => {
+   getSkills()
+     .then((skillsData) => {
+       setSkills(skillsData);
+       setIsLoading(false);
+     })
+     .catch((error) => {
+       setError(error);
+       setIsLoading(false);
+     });
+   getLocations()
+     .then((locationsData) => {
+       setLocations(locationsData);
+     })
+     .catch((error) => {
+       setError(error);
+     });
+ }, []);
+// const [skillsIsLoading, setSkillsIsLoading] = useState(true);
+// const [locationsIsLoading, setLocationsIsLoading] = useState(true);
 
-useEffect(() => {
-  // Fetch skills
-  getSkills()
-    .then((skillsData) => {
-      setSkills(skillsData);
-      setSkillsIsLoading(false); // Set skillsIsLoading to false
-    })
-    .catch((error) => {
-      setError(error);
-      setSkillsIsLoading(false); // Set skillsIsLoading to false on error
-    });
+// useEffect(() => {
+//   // Fetch skills
+//   getSkills()
+//     .then((skillsData) => {
+//       setSkills(skillsData);
+//       setSkillsIsLoading(false); // Set skillsIsLoading to false
+//     })
+//     .catch((error) => {
+//       setError(error);
+//       setSkillsIsLoading(false); // Set skillsIsLoading to false on error
+//     });
 
-  // Fetch locations
-  getLocations()
-    .then((locationsData) => {
-      setLocations(locationsData);
-      setLocationsIsLoading(false); // Set locationsIsLoading to false
-    })
-    .catch((error) => {
-      setError(error);
-      setLocationsIsLoading(false); // Set locationsIsLoading to false on error
-    });
-}, []);
+//   // Fetch locations
+//   getLocations()
+//     .then((locationsData) => {
+//       setLocations(locationsData);
+//       setLocationsIsLoading(false); // Set locationsIsLoading to false
+//     })
+//     .catch((error) => {
+//       setError(error);
+//       setLocationsIsLoading(false); // Set locationsIsLoading to false on error
+//     });
+// }, []);
 
-if (skillsIsLoading || locationsIsLoading) {
-  return <p>Loading...</p>;
-}
+// if (skillsIsLoading || locationsIsLoading) {
+//   return <p>Loading...</p>;
+// }
 
   
-//  if (isLoading) {
-//    return <p>Loading...</p>;
-//  }
+ if (isLoading) {
+   return <p>Loading...</p>;
+ }
 
  if (error) {
    return <p>Error: {error.message}</p>;
