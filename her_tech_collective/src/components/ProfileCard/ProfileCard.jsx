@@ -4,7 +4,7 @@ import "./ProfileCard.css";
 function ProfileCard(props) {
     const { profileData } = props;
 
-    const profileLink = `${profileData.id}/`;
+    const profileLink = `/profiles/${profileData.id}/`;
 
     console.log('profile data in profileCARD: ', profileData)
 
