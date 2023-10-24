@@ -53,7 +53,7 @@ function NavBar() {
 
                 {auth.token ? (
                     <>
-                        <Link to="/account/:id/" onClick={closeMenu}>Hi, {auth.username}</Link>
+                        <Link to={`/account/${auth.userId}/`} onClick={closeMenu}>Hi, {auth.username}</Link>
                         <Link to="/" onClick={handleLogout}>Log Out</Link>
                         <Link to="/profiles/create/">Create new profile</Link>
                     </>
