@@ -14,9 +14,11 @@ import ProfilesPage from './pages/ProfilesPage';
 import ProfilePage from './pages/ProfilePage';
 import UpdateProfilePage from './pages/UpdateProfilePage';
 
+
 //Importing components
 import NavBar from './components/NavBar';
 import { AuthProvider } from './components/AuthProvider.jsx';
+import NotFound from './components/NotFound';
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,7 @@ const router = createBrowserRouter([
       { path: "/profiles/create/", element: <CreateProfilePage />},
       { path: "/profiles/:id/", element: <ProfilePage />},
       {path: "/update-profile/:id/", element: <UpdateProfilePage />},
+      {path: '*', element: <NotFound />},
     ] 
   }
 ]);
